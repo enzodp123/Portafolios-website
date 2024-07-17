@@ -10,15 +10,18 @@
 /*CONFIG GENERAL HTML*/
 
 *{
+    transition: scroll-behavior 3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
 
+
 /*ESTILOS GENERALES*/
 
 body{
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
