@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 67.65 61.96">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre_10-3);
+      }
+
+      .cls-4 {
+        fill: url(#Degradado_sin_nombre_10-2);
+      }
+
+      .cls-5 {
+        fill: url(#Degradado_sin_nombre_10);
+      }
+
+      .cls-6 {
+        font-family: DaysSansBlack, 'Days Sans Black';
+        font-size: 9.24px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        fill: #434a9a;
+      }
+
+      .cls-8 {
+        fill: #1d1d1b;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_10" data-name="Degradado sin nombre 10" x1="39.22" y1="28.93" x2="46.56" y2="36.26" gradientUnits="userSpaceOnUse">
+      <stop offset=".08" stop-color="#d34090"/>
+      <stop offset=".74" stop-color="#79b6e5"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_10-2" data-name="Degradado sin nombre 10" x1="8.81" y1="34.08" x2="27.32" y2="15.57" xlink:href="#Degradado_sin_nombre_10"/>
+    <linearGradient id="Degradado_sin_nombre_10-3" data-name="Degradado sin nombre 10" x1="22.77" y1="36.53" x2="37.73" y2="21.57" xlink:href="#Degradado_sin_nombre_10"/>
+  </defs>
+  <polygon class="cls-7" points="34.68 18.53 42.1 32.12 39.78 39.51 32.65 26.42 34.5 18.68 34.68 18.53"/>
+  <path class="cls-5" d="M41.02,28.29s.21-2.86,3-2.93,3.28,2.12,3.28,2.12l-.35,6.28s-.71,5.08-5.22,5.75h-1.94s1.31-9.42,1.24-11.22Z"/>
+  <path class="cls-4" d="M21.64,10.27s-2.9,.1-4.31,1.31-2.17,2.51-2.41,3.52-1.61,13.1-1.61,13.1c0,0-.95,9.79-.42,9.95,0,0,1.64,1.77,3.07,1.67s2.81-1.32,3.12-2.59,.87-8.74,.87-8.74c0,0,1.64-17.63,2.01-18l.06-.22h-.38Z"/>
+  <path class="cls-7" d="M22.02,10.27l5.74,16.84-1.92,12.48-5.51-15.92s.94-13.1,1.69-13.39Z"/>
+  <path class="cls-3" d="M34.68,18.53s-4.71-.14-6.41,3.37c0,0-.78,1.54-.94,3.53s-.83,8.58-.83,8.58l-.64,5.63s3.81,.69,6.53-3.49c0,0,.92-2.22,1.13-5.45s.6-11.03,1.15-12.16Z"/>
+  <text class="cls-6" transform="translate(8.59 52.45)"><tspan class="cls-8" x="0" y="0"> </tspan><tspan class="cls-1" x="2.87" y="0">ENDE</tspan><tspan class="cls-2" x="33.83" y="0">V</tspan></text>
+</svg>

@@ -1,0 +1,163 @@
+    $blueBlack:#2B2D42;
+    $cian:#8D99AE;
+    $white:#EDF2F4;
+    $redLow:#EF233C;
+    $redMid:#D90429;
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*CONFIG GENERAL HTML*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/*ESTILOS GENERALES*/
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/background.svg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+/*ENCABEZADO*/
+
+.header{
+    width: 100%;
+    position: fixed;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+    justify-content: space-around;
+    img{
+        width: 8em;
+    }
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 4em;
+            list-style: none;
+        }
+    }
+    transition: backdrop-filter .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
+}
+
+.link{
+    color: var(--blueBlack);
+                text-decoration: none;
+                font-size: 1.3em;
+                font-weight: 500;
+                border-bottom: solid .2rem $blueBlack;
+                padding: .5em;
+                transition: color .6s cubic-bezier(.47,.09,.75,.48),box-shadow .6s cubic-bezier(.47,.09,.75,.48) ;
+}
+
+.link:hover, .link:focus{
+    color: $white;
+    box-shadow: inset 6.4em 0 0 0 $blueBlack;
+    animation: forwards;
+}
+
+.blur{
+    backdrop-filter: blur(3px);
+}
+
+/*MAIN HOME*/
+
+main{
+    height: 100%;
+    position: relative;
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20vh;
+    span{
+        margin-left: 2.5em;
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid ;
+        font-size: 2.5em;
+        width: 17ch;
+        font-weight: 600;
+        margin-top: 2em;
+        animation: typing 2s steps(17), trs .8s step-end 5;
+        overflow: hidden;
+    }
+    section p{
+        text-overflow: ellipsis;
+        text-align: center;
+        width: 60vw;
+        margin :4em;
+        font-size: 1.3em;
+    }
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes trs {
+    50%{
+        border-color: transparent;
+    }
+}
+
+/*LENGUAJES SECTION*/
+
+
+.lenguajes{
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    border-top: solid 2px $blueBlack;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    span{
+        font-size: 2.5em;
+        width: 21ch;
+        font-weight: 700;
+        margin-bottom: 1em;
+        
+        
+    }
+    .animation-span{
+            animation: typing 2s steps(21);
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    p{
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .icons img{
+        padding: 2em;
+        margin: 2em;
+        width: 10em;
+        filter: grayscale(100%);
+        transition: filter .5s cubic-bezier(0.215, 0.610, 0.355, 1), padding .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+
+.icons img:hover{
+    filter:grayscale(0%);
+    padding: 1.7em;
+}
