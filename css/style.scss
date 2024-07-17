@@ -3,7 +3,8 @@
     $white:#EDF2F4;
     $redLow:#EF233C;
     $redMid:#D90429;
-
+    $deg:#79b6e5;
+    $deg2:#d34090;
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*CONFIG GENERAL HTML*/
@@ -18,7 +19,7 @@
 /*ESTILOS GENERALES*/
 
 body{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,16 +33,17 @@ body{
 /*ENCABEZADO*/
 
 .header{
-    width: 100%;
+    width: 80vw;
     position: fixed;
     height: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;
     z-index: 2;
-    justify-content: space-around;
+    justify-content: space-between;
     img{
-        width: 8em;
+        width: 7em;
+        transition: width .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     nav{
         ul{
@@ -51,7 +53,7 @@ body{
             list-style: none;
         }
     }
-    transition: backdrop-filter .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
+    transition: backdrop-filter .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), height .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 .link{
@@ -71,20 +73,24 @@ body{
 }
 
 .blur{
+    img{
+        width: 6em;
+    }
     backdrop-filter: blur(3px);
+    height: 70px;
 }
 
 /*MAIN HOME*/
 
 main{
-    height: 100%;
-    position: relative;
+    height: 100vh;
     margin-top: 120px;
-    width: 100%;
+    width: 80vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 20vh;
+    flex-wrap: nowrap;
     span{
         margin-left: 2.5em;
         display: block;
@@ -94,7 +100,7 @@ main{
         width: 17ch;
         font-weight: 600;
         margin-top: 2em;
-        animation: typing 2s steps(17), trs .8s step-end 5;
+        animation: typing 2s steps(48) , trs .8s step-end 5 forwards;
         overflow: hidden;
     }
     section p{
@@ -106,40 +112,28 @@ main{
     }
 }
 
-@keyframes typing {
-    from{
-        width: 0;
-    }
-}
-
-@keyframes trs {
-    50%{
-        border-color: transparent;
-    }
-}
 
 /*LENGUAJES SECTION*/
 
 
 .lenguajes{
     position: relative;
-    width: 80%;
+    width: 80vw;
     height: 100vh;
     border-top: solid 2px $blueBlack;
     display: flex;
     flex-direction: column;
     align-items: center;
+    place-content: center;
     padding: 3em;
     span{
         font-size: 2.5em;
-        width: 21ch;
+        width: 23ch;
         font-weight: 700;
         margin-bottom: 1em;
-        
-        
     }
     .animation-span{
-            animation: typing 2s steps(21);
+            animation: typing 2s steps(84);
             display: block;
             white-space: nowrap;
             overflow: hidden;
@@ -147,6 +141,11 @@ main{
     p{
         font-size: 1.3em;
         text-align: center;
+    }
+    .icons{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 6em;
     }
     .icons img{
         padding: 2em;
@@ -160,4 +159,62 @@ main{
 .icons img:hover{
     filter:grayscale(0%);
     padding: 1.7em;
+}
+
+/*ARTICULO ESTILOS*/
+
+#article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 2px $blueBlack;
+    width: 80vw;
+    height: 100vh;
+    .span-2{
+        margin-top: 1em;
+        text-align: center;
+        font-size: 2.5em;
+        width: 7ch;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+}
+
+.prop{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .proyectos{
+        width: 500px;
+        margin: 2em;
+        height: 280px;
+        background: rgb(213,0,208);
+        background: linear-gradient(19deg, rgba(213,0,208,1) 10%, rgba(47,195,255,1) 86%);
+        box-shadow:inset 10px 10px 50px 0px $blueBlack;
+        filter: grayscale(100%);
+        transition: filter .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+.proyectos:hover{
+            filter: grayscale(0%);
+        }
+
+
+}
+
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes trs {
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: transparent;
+    }
 }

@@ -9,7 +9,7 @@
 
 /*ESTILOS GENERALES*/
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,20 +22,21 @@ body {
 
 /*ENCABEZADO*/
 .header {
-  width: 100%;
+  width: 80vw;
   position: fixed;
   height: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
   z-index: 2;
-  justify-content: space-around;
-  transition: -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  justify-content: space-between;
+  transition: height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .header img {
-  width: 8em;
+  width: 7em;
+  transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header nav ul {
   display: flex;
@@ -63,18 +64,22 @@ body {
 .blur {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  height: 70px;
+}
+.blur img {
+  width: 6em;
 }
 
 /*MAIN HOME*/
 main {
-  height: 100%;
-  position: relative;
+  height: 100vh;
   margin-top: 120px;
-  width: 100%;
+  width: 80vw;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 20vh;
+  flex-wrap: nowrap;
 }
 main span {
   margin-left: 2.5em;
@@ -85,7 +90,7 @@ main span {
   width: 17ch;
   font-weight: 600;
   margin-top: 2em;
-  animation: typing 2s steps(17), trs 0.8s step-end 5;
+  animation: typing 2s steps(48), trs 0.8s step-end 5 forwards;
   overflow: hidden;
 }
 main section p {
@@ -96,35 +101,26 @@ main section p {
   font-size: 1.3em;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-@keyframes trs {
-  50% {
-    border-color: transparent;
-  }
-}
 /*LENGUAJES SECTION*/
 .lenguajes {
   position: relative;
-  width: 80%;
+  width: 80vw;
   height: 100vh;
   border-top: solid 2px #2B2D42;
   display: flex;
   flex-direction: column;
   align-items: center;
+  place-content: center;
   padding: 3em;
 }
 .lenguajes span {
   font-size: 2.5em;
-  width: 21ch;
+  width: 23ch;
   font-weight: 700;
   margin-bottom: 1em;
 }
 .lenguajes .animation-span {
-  animation: typing 2s steps(21);
+  animation: typing 2s steps(84);
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -132,6 +128,11 @@ main section p {
 .lenguajes p {
   font-size: 1.3em;
   text-align: center;
+}
+.lenguajes .icons {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 6em;
 }
 .lenguajes .icons img {
   padding: 2em;
@@ -144,4 +145,57 @@ main section p {
 .icons img:hover {
   filter: grayscale(0%);
   padding: 1.7em;
+}
+
+/*ARTICULO ESTILOS*/
+#article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid 2px #2B2D42;
+  width: 80vw;
+  height: 100vh;
+}
+#article .span-2 {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2.5em;
+  width: 7ch;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.prop {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.prop .proyectos {
+  width: 500px;
+  margin: 2em;
+  height: 280px;
+  background: rgb(213, 0, 208);
+  background: linear-gradient(19deg, rgb(213, 0, 208) 10%, rgb(47, 195, 255) 86%);
+  box-shadow: inset 10px 10px 50px 0px #2B2D42;
+  filter: grayscale(100%);
+  transition: filter 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.prop .proyectos:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes trs {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
