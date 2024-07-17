@@ -10,7 +10,6 @@
 
 /*ESTILOS GENERALES*/
 body {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -35,9 +34,10 @@ body {
   transition: height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-backdrop-filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: width 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header img {
-  width: 7em;
+  width: 9em;
   transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header nav ul {
@@ -64,18 +64,20 @@ body {
 }
 
 .blur {
+  width: 100vw;
+  padding: 0px 10em;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   height: 70px;
 }
 .blur img {
-  width: 6em;
+  width: 7em;
 }
 
 /*MAIN HOME*/
 main {
   height: 100vh;
-  margin-top: 120px;
+  margin-top: 30vh;
   width: 80vw;
   display: flex;
   align-items: center;
